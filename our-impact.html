@@ -1,0 +1,58 @@
+---
+layout: default
+title: Our Impact
+---
+<section class="page-banner">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / Our Impact</div>
+    <div class="eyebrow"><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Since 2020</div>
+    <h1>Measurable change, real communities</h1>
+    <p>Numbers matter because behind every one is a person, a family, a community moving toward greater self-reliance.</p>
+  </div>
+</section>
+
+<section class="impact" style="padding-top:80px;">
+  <div class="wrap">
+    <div class="impact-grid">
+      {% for stat in site.data.site.impact.stats %}
+      <div class="stat"><strong data-count="{{ stat.number }}" data-suffix="{{ stat.suffix }}">0</strong><span>{{ stat.label }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="content-page">
+  <div class="wrap prose">
+    <h2>How we measure impact</h2>
+    <p>We track both reach and depth — not just how many people our programs touch, but how their lives change as a result. Our teams conduct regular community assessments, gather feedback directly from participants, and report transparently to donors and partners on progress against our ten program pillars.</p>
+
+    <h2>What this looks like on the ground</h2>
+    <ul>
+      <li><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Families with improved access to clean water and healthcare</li>
+      <li><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Young people trained in vocational and leadership skills now supporting their households</li>
+      <li><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Single mothers running sustainable small businesses through our livelihoods program</li>
+      <li><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Communities actively engaged in environmental restoration and climate resilience</li>
+    </ul>
+
+    <h2>Accountability &amp; transparency</h2>
+    <p>We believe communities and donors alike deserve full visibility into how resources are used. Holistic Impact Hub is committed to transparent reporting, and we're building digital tools — including our HiHub platform — to make impact and fund usage even more visible in real time.</p>
+  </div>
+</section>
+
+<section class="voices" id="voices">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">In their words</div>
+      <h2>Stories of lasting change</h2>
+    </div>
+    <div class="voice-grid">
+      {% for t in site.data.testimonials.items %}
+      <div class="voice-card">
+        <span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <p>"{{ t.quote }}"</p>
+        <div class="who">{{ t.name }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

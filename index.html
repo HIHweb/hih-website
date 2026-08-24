@@ -1,0 +1,201 @@
+---
+layout: default
+---
+<section class="hero" id="top">
+  <svg class="hero-hills" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,140 C150,80 300,180 480,120 C650,65 800,150 1000,100 C1100,75 1160,110 1200,95 L1200,220 L0,220 Z" fill="rgba(31,92,66,0.10)"/>
+    <path d="M0,180 C180,130 360,200 540,160 C700,125 860,190 1040,150 C1120,132 1160,155 1200,145 L1200,220 L0,220 Z" fill="rgba(31,92,66,0.16)"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>{{ site.data.site.hero.eyebrow }}</div>
+      <h1>{{ site.data.site.hero.title_line1 }} <em>{{ site.data.site.hero.title_line2_italic }}</em></h1>
+      <p class="lede">{{ site.data.site.hero.lede }}</p>
+      <div class="btn-row">
+        <a href="#programs" class="btn btn-primary">{{ site.data.site.hero.primary_button_text }}</a>
+        <a href="#give" class="btn btn-outline">{{ site.data.site.hero.secondary_button_text }}</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="{{ site.data.site.hero.image }}" alt="{{ site.data.site.hero.image_alt }}">
+      <div class="tag"><strong data-count="{{ site.data.site.hero.stat_number }}" data-suffix="{{ site.data.site.hero.stat_suffix }}">0</strong><span>{{ site.data.site.hero.stat_label }}</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip-inner">
+    {% for item in site.data.site.pillar_strip %}<span>{{ item }}</span><span class="dot">&middot;</span>{% endfor %}
+    {% for item in site.data.site.pillar_strip %}<span>{{ item }}</span><span class="dot">&middot;</span>{% endfor %}
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <img src="{{ site.data.site.about.image }}" alt="{{ site.data.site.about.image_alt }}">
+    <div class="about-text">
+      <div class="eyebrow">{{ site.data.site.about.eyebrow }}</div>
+      <h2 style="color:var(--forest-2); font-size:2.1rem; margin-bottom:20px;">{{ site.data.site.about.title }}</h2>
+      <p>{{ site.data.site.about.paragraph_1 }}</p>
+      <p>{{ site.data.site.about.paragraph_2 }}</p>
+      <ul class="pillars">
+        {% for point in site.data.site.about.points %}
+        <li><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>{{ point }}</li>
+        {% endfor %}
+      </ul>
+
+      <div class="sdg-row">
+        <div class="label">Contributing to the UN Sustainable Development Goals</div>
+        <div class="sdg-chips">
+          {% for sdg in site.data.site.about.sdgs %}
+          <div class="sdg-chip"><span class="n">{{ sdg.number }}</span>{{ sdg.label }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">{{ site.data.site.approach.eyebrow }}</div>
+      <h2>{{ site.data.site.approach.title }}</h2>
+      <p>{{ site.data.site.approach.intro }}</p>
+    </div>
+    <div class="approach-steps">
+      {% for step in site.data.site.approach.steps %}
+      <div class="approach-step">
+        <div class="num">{{ step.number }}</div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">{{ site.data.site.programs_section.eyebrow }}</div>
+      <h2>{{ site.data.site.programs_section.title }}</h2>
+      <p>{{ site.data.site.programs_section.intro }}</p>
+    </div>
+    <div class="program-grid">
+      {% for program in site.data.programs.items %}
+      <div class="program-card">
+        <div class="thumb"><img src="{{ program.image }}" alt="{{ program.image_alt }}"></div>
+        <div class="body">
+          <h3>{{ program.title }}</h3>
+          <p>{{ program.description }}</p>
+          <span class="learn">Learn more &rarr;</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="programs-foot">
+      <span>{{ site.data.site.programs_section.footnote }}</span>
+      <a href="our-programs.html" class="btn btn-outline">View all programs</a>
+    </div>
+  </div>
+</section>
+
+<section class="impact" id="impact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">{{ site.data.site.impact.eyebrow }}</div>
+      <h2>{{ site.data.site.impact.title }}</h2>
+      <p>{{ site.data.site.impact.intro }}</p>
+    </div>
+    <div class="impact-grid">
+      {% for stat in site.data.site.impact.stats %}
+      <div class="stat"><strong data-count="{{ stat.number }}" data-suffix="{{ stat.suffix }}">0</strong><span>{{ stat.label }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="voices" id="voices">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">{{ site.data.site.voices_section.eyebrow }}</div>
+      <h2>{{ site.data.site.voices_section.title }}</h2>
+    </div>
+    <div class="voice-grid">
+      {% for t in site.data.testimonials.items %}
+      <div class="voice-card">
+        <span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <p>"{{ t.quote }}"</p>
+        <div class="who">{{ t.name }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="wrap">
+    <div class="eyebrow">{{ site.data.site.partners.eyebrow }}</div>
+    <h2 style="color:#fff; font-size:1.9rem; margin-bottom:14px;">{{ site.data.site.partners.title }}</h2>
+    <p>{{ site.data.site.partners.text }}</p>
+  </div>
+</section>
+
+<section class="cta" id="give">
+  <div class="wrap cta-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--sun);">{{ site.data.site.give.eyebrow }}</div>
+      <h2>{{ site.data.site.give.title }}</h2>
+      <p>{{ site.data.site.give.text }}</p>
+      <div class="btn-row" style="margin-top:22px;">
+        <a href="#contact" class="btn" style="background:#fff; color:var(--forest-2);">Donate now</a>
+        <a href="#contact" class="btn btn-light">Become a partner</a>
+      </div>
+    </div>
+    <div class="give-options">
+      {% for option in site.data.site.give.options %}
+      <div class="give-card">
+        <div><h4>{{ option.title }}</h4><span>{{ option.text }}</span></div>
+        <a href="#contact" class="btn btn-light" style="padding:9px 16px; font-size:0.82rem;">{{ option.button }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <div class="eyebrow">Get in touch</div>
+      <h3>Our Hub in Burundi</h3>
+      <p>{{ site.data.site.contact.address_line1 }}<br>{{ site.data.site.contact.address_line2 }}<br>{{ site.data.site.contact.address_line3 }}</p>
+      <div class="email-list">
+        {% for email in site.data.site.contact.emails %}
+        <div class="email-row"><span>{{ email.label }}</span><a href="mailto:{{ email.address }}">{{ email.address }}</a></div>
+        {% endfor %}
+      </div>
+      <div class="socials">
+        <a href="{{ site.data.site.contact.facebook }}" aria-label="Facebook">FB</a>
+        <a href="{{ site.data.site.contact.linkedin }}" aria-label="LinkedIn">in</a>
+        <a href="{{ site.data.site.contact.youtube }}" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <form id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

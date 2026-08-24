@@ -1,0 +1,30 @@
+---
+layout: default
+title: News & Stories
+---
+<section class="page-banner">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / News &amp; Stories</div>
+    <div class="eyebrow"><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Latest updates</div>
+    <h1>News &amp; Stories</h1>
+    <p>Updates from our programs, partnerships, and the communities we work alongside.</p>
+  </div>
+</section>
+
+<section class="content-page">
+  <div class="wrap">
+    <div class="card-grid">
+      {% for post in site.data.news.items %}
+      <div class="story-card">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+        <div class="body">
+          <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt }}</p>
+          <span class="learn">Read more &rarr;</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

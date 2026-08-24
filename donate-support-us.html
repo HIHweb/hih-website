@@ -1,0 +1,54 @@
+---
+layout: default
+title: Donate & Support Us
+---
+<section class="page-banner">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / Donate &amp; Support Us</div>
+    <div class="eyebrow"><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Your support matters</div>
+    <h1>Help us weave a world where no one is left behind</h1>
+    <p>Every contribution — however you choose to give — directly funds programs in health, education, environment, and economic empowerment across Burundi.</p>
+  </div>
+</section>
+
+<section class="content-page">
+  <div class="wrap">
+    <div class="value-grid">
+      <div class="value-card">
+        <h3>One-time Gift</h3>
+        <p>A single contribution that goes directly toward active programs — no amount is too small.</p>
+      </div>
+      <div class="value-card">
+        <h3>Monthly Giving</h3>
+        <p>Recurring support helps us plan and sustain programs over the long term, with predictable funding.</p>
+      </div>
+      <div class="value-card">
+        <h3>In-Kind Support</h3>
+        <p>Equipment, supplies, or professional services that directly support our program delivery.</p>
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top:50px;">
+      <h2>How to give</h2>
+      <p>To make a donation or discuss in-kind support, please reach out directly — we'll walk you through the options and make sure your contribution reaches exactly where you'd like it to go.</p>
+      <p><strong>Email:</strong> <a href="mailto:info@holisticimpacthub.org" style="color:var(--forest); text-decoration:underline;">info@holisticimpacthub.org</a></p>
+    </div>
+
+    {% assign bank = site.data.site.contact.bank %}
+    {% if bank.bank_name and bank.account_number %}
+    <div class="value-card" style="margin-top:40px; max-width:520px;">
+      <h3>Bank Transfer Details</h3>
+      <p style="margin-bottom:6px;"><strong>Bank:</strong> {{ bank.bank_name }}</p>
+      <p style="margin-bottom:6px;"><strong>Account name:</strong> {{ bank.account_name }}</p>
+      <p style="margin-bottom:6px;"><strong>Account number:</strong> {{ bank.account_number }}</p>
+      {% if bank.swift_code %}<p style="margin-bottom:6px;"><strong>SWIFT / BIC:</strong> {{ bank.swift_code }}</p>{% endif %}
+      {% if bank.currency %}<p style="margin-bottom:6px;"><strong>Currency:</strong> {{ bank.currency }}</p>{% endif %}
+      {% if bank.notes %}<p style="margin-top:12px; font-size:0.88rem; color:#4B5850;">{{ bank.notes }}</p>{% endif %}
+    </div>
+    {% endif %}
+
+    <div class="prose" style="margin-top:40px;">
+      <p>Every gift supports our ten integrated program pillars — from clean water access and child nutrition to youth training and sustainable livelihoods — reaching communities across 12 locations in Burundi.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+title: Holistic Impact Hub
+url: "https://www.holisticimpacthub.org"
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

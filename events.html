@@ -1,0 +1,27 @@
+---
+layout: default
+title: Events
+---
+<section class="page-banner">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / Events</div>
+    <div class="eyebrow"><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Get involved</div>
+    <h1>Upcoming Events</h1>
+    <p>Join us at community events, outreach programs, and gatherings across Burundi.</p>
+  </div>
+</section>
+
+<section class="content-page">
+  <div class="wrap" style="max-width:820px;">
+    {% for event in site.data.events.items %}
+    <div class="event-row">
+      <div class="event-date"><span class="day">{{ event.day }}</span><span class="month">{{ event.month }}</span></div>
+      <div class="event-body">
+        <h3>{{ event.title }}</h3>
+        <div class="meta">{{ event.meta }}</div>
+        <p>{{ event.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

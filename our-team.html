@@ -1,0 +1,38 @@
+---
+layout: default
+title: Our Team
+---
+<section class="page-banner">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> / Our Team</div>
+    <div class="eyebrow"><span class="rhythm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>The people behind the work</div>
+    <h1>Meet our team</h1>
+    <p>A team of local leaders, organizers, and specialists committed to community-driven development across Burundi.</p>
+  </div>
+</section>
+
+<section class="content-page">
+  <div class="wrap">
+    <div class="team-grid">
+      {% for member in site.data.team.members %}
+      <div class="team-card">
+        <img src="{{ member.photo }}" alt="{{ member.name }}">
+        <h3>{{ member.name }}</h3>
+        <div class="role">{{ member.role }}</div>
+        <p>{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="join">
+  <div class="wrap" style="text-align:center;">
+    <div class="eyebrow" style="color:var(--sun); justify-content:center;">Join us</div>
+    <h2>Interested in working with Holistic Impact Hub?</h2>
+    <p style="margin:0 auto 26px;">We're always glad to hear from people who share our commitment to community-driven change.</p>
+    <div class="btn-row" style="justify-content:center;">
+      <a href="/contact.html" class="btn" style="background:#fff; color:var(--forest-2);">Get in touch</a>
+    </div>
+  </div>
+</section>
