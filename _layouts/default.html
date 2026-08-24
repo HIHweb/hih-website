@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ site.data.site.meta.title }}</title>
+<meta name="description" content="{{ site.data.site.meta.description }}">
+<link rel="canonical" href="{{ site.url }}/">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ site.data.site.meta.title }}">
+<meta property="og:description" content="{{ site.data.site.meta.description }}">
+<meta property="og:image" content="{{ site.data.site.hero.image }}">
+<meta property="og:url" content="{{ site.url }}/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Holistic Impact Hub",
+  "url": "{{ site.url }}/",
+  "logo": "{{ site.url }}/assets/images/logo_full.png",
+  "foundingDate": "2020",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.data.site.contact.address_line1 }}",
+    "addressLocality": "Bujumbura",
+    "addressCountry": "BI"
+  },
+  "sameAs": [
+    "{{ site.data.site.contact.facebook }}",
+    "{{ site.data.site.contact.linkedin }}",
+    "{{ site.data.site.contact.youtube }}"
+  ],
+  "email": "{{ site.data.site.contact.emails[0].address }}"
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header>
+  <div class="nav">
+    <a href="/" class="brand"><img src="{{ '/assets/images/icon.png' | relative_url }}" alt="" width="72" height="72">Holistic Impact Hub</a>
+    <nav class="links" id="primary-nav">
+      <a href="/about-us.html">About</a>
+      <a href="/our-programs.html">Programs</a>
+      <a href="/our-impact.html">Impact</a>
+      <a href="/news-stories.html">Stories</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/donate-support-us.html" class="nav-cta">Donate</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
+  </div>
+</header>
+
+<main id="main">
+{{ content }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="{{ '/assets/images/icon.png' | relative_url }}" alt="" width="76" height="76">Holistic Impact Hub</div>
+        <p style="max-width:34ch; opacity:0.85; margin-bottom:20px;">{{ site.data.site.footer.tagline }}</p>
+        <label for="newsletter" class="sr-only">Email address for newsletter</label>
+        <div class="newsletter">
+          <input type="email" id="newsletter" placeholder="you@email.com">
+          <button type="button" id="newsletterBtn">Subscribe</button>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="our-programs.html">Our Programs</a></li>
+          <li><a href="our-impact.html">Our Impact</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+          <li><a href="news-stories.html">News &amp; Stories</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Get Involved</h5>
+        <ul>
+          <li><a href="donate-support-us.html">Donate</a></li>
+          <li><a href="partnerships.html">Partnerships</a></li>
+          <li><a href="#give">Volunteer</a></li>
+          <li><a href="advancing-equity-inclusion-human-rights.html">Equity &amp; Human Rights</a></li>
+          <li><a href="art-culture-heritage.html">Art, Culture &amp; Heritage</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:{{ site.data.site.contact.emails[0].address }}">{{ site.data.site.contact.emails[0].address }}</a></li>
+          <li>{{ site.data.site.contact.address_line1 }}</li>
+          <li>{{ site.data.site.contact.address_line2 }}</li>
+          <li><a href="contact.html">Full contact page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-row">
+      <span>&copy; <span id="year">2026</span> Holistic Impact Hub — Bujumbura, Burundi</span>
+      <span><a href="/about-us.html">About</a> &middot; <a href="/our-programs.html">Programs</a> &middot; <a href="/contact.html">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function() {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
