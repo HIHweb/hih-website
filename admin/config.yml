@@ -1,0 +1,232 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "site"
+    label: "Homepage Content"
+    files:
+      - label: "Homepage"
+        name: "site"
+        file: "_data/site.yml"
+        fields:
+          - { label: "Page Title (SEO)", name: "meta", widget: "object", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Description", name: "description", widget: "text" }
+            ]}
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text (small line above title)", name: "eyebrow", widget: "string" }
+              - { label: "Title (line 1)", name: "title_line1", widget: "string" }
+              - { label: "Title (line 2, italic/highlighted)", name: "title_line2_italic", widget: "string" }
+              - { label: "Subtext", name: "lede", widget: "text" }
+              - { label: "Primary button text", name: "primary_button_text", widget: "string" }
+              - { label: "Secondary button text", name: "secondary_button_text", widget: "string" }
+              - { label: "Hero photo", name: "image", widget: "image" }
+              - { label: "Hero photo alt text", name: "image_alt", widget: "string" }
+              - { label: "Stat number (e.g. 3500)", name: "stat_number", widget: "number" }
+              - { label: "Stat suffix (e.g. +)", name: "stat_suffix", widget: "string", required: false }
+              - { label: "Stat label", name: "stat_label", widget: "string" }
+          - label: "Scrolling pillar strip"
+            name: "pillar_strip"
+            widget: "list"
+            field: { label: "Pillar", name: "item", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo alt text", name: "image_alt", widget: "string" }
+              - { label: "Paragraph 1", name: "paragraph_1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph_2", widget: "text" }
+              - label: "Bullet points"
+                name: "points"
+                widget: "list"
+                field: { label: "Point", name: "item", widget: "string" }
+              - label: "SDG badges"
+                name: "sdgs"
+                widget: "list"
+                fields:
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+          - label: "Theory of Change (Approach) Section"
+            name: "approach"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro text", name: "intro", widget: "text" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Number (e.g. 01)", name: "number", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Programs Section Header"
+            name: "programs_section"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro text", name: "intro", widget: "text" }
+              - { label: "Footnote", name: "footnote", widget: "string" }
+          - label: "Impact Section"
+            name: "impact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro text", name: "intro", widget: "text" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Number", name: "number", widget: "number" }
+                  - { label: "Suffix (e.g. + or %)", name: "suffix", widget: "string", required: false }
+                  - { label: "Label", name: "label", widget: "string" }
+          - label: "Testimonials Section Header"
+            name: "voices_section"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          - label: "Partners Section"
+            name: "partners"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Get Involved / Donate Section"
+            name: "give"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - label: "Options (Donate / Partner / Volunteer)"
+                name: "options"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Button label", name: "button", widget: "string" }
+          - label: "Contact Info"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Address line 1", name: "address_line1", widget: "string" }
+              - { label: "Address line 2", name: "address_line2", widget: "string" }
+              - { label: "Address line 3", name: "address_line3", widget: "string" }
+              - label: "Email addresses"
+                name: "emails"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Email address", name: "address", widget: "string" }
+              - { label: "Facebook URL", name: "facebook", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+              - { label: "YouTube URL", name: "youtube", widget: "string" }
+              - label: "Bank Transfer Details (for donations)"
+                name: "bank"
+                widget: "object"
+                hint: "Leave any field blank to hide the bank details section from the website entirely. Fill all fields in once your organizational bank account is open."
+                fields:
+                  - { label: "Bank name", name: "bank_name", widget: "string", required: false }
+                  - { label: "Account holder name", name: "account_name", widget: "string", required: false }
+                  - { label: "Account number / IBAN", name: "account_number", widget: "string", required: false }
+                  - { label: "SWIFT / BIC code", name: "swift_code", widget: "string", required: false }
+                  - { label: "Currency", name: "currency", widget: "string", required: false }
+                  - { label: "Additional notes (optional)", name: "notes", widget: "text", required: false }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+
+  - name: "programs"
+    label: "Program Cards"
+    files:
+      - label: "All Programs"
+        name: "programs"
+        file: "_data/programs.yml"
+        fields:
+          - label: "Programs"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo alt text", name: "image_alt", widget: "string" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - label: "All Testimonials"
+        name: "testimonials"
+        file: "_data/testimonials.yml"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name", name: "name", widget: "string" }
+
+  - name: "team"
+    label: "Our Team"
+    files:
+      - label: "Team Members"
+        name: "team"
+        file: "_data/team.yml"
+        fields:
+          - label: "Team members"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role / title", name: "role", widget: "string" }
+              - { label: "Short bio", name: "bio", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image" }
+
+  - name: "news"
+    label: "News & Stories"
+    files:
+      - label: "News Posts"
+        name: "news"
+        file: "_data/news.yml"
+        fields:
+          - label: "Posts"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "Short excerpt", name: "excerpt", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image" }
+
+  - name: "events"
+    label: "Events"
+    files:
+      - label: "Upcoming Events"
+        name: "events"
+        file: "_data/events.yml"
+        fields:
+          - label: "Events"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Day (e.g. 15)", name: "day", widget: "string" }
+              - { label: "Month (e.g. Sep)", name: "month", widget: "string" }
+              - { label: "Event title", name: "title", widget: "string" }
+              - { label: "Location / time", name: "meta", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
