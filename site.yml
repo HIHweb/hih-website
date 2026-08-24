@@ -1,0 +1,147 @@
+meta:
+  title: "Holistic Impact Hub | Community-Driven Development in Burundi"
+  description: "Holistic Impact Hub is a Burundi-based non-profit building resilient, thriving communities through integrated programs in health, education, environment, livelihoods, and youth empowerment."
+
+hero:
+  eyebrow: "Bujumbura, Burundi · Since 2020"
+  title_line1: "Burundi is rising —"
+  title_line2_italic: "and we rise with her."
+  lede: "Holistic Impact Hub walks alongside people and communities — kindling dignity, unlocking potential, and weaving a world where no one is left behind."
+  primary_button_text: "Explore our programs"
+  secondary_button_text: "Support the work"
+  image: "https://primary.jwwb.nl/pexels/61/6146693.jpeg"
+  image_alt: "Community members in Burundi"
+  stat_number: 3500
+  stat_suffix: "+"
+  stat_label: "Community members directly served"
+
+pillar_strip:
+  - "Health & Wellbeing"
+  - "Education & Empowerment"
+  - "Environmental Stewardship"
+  - "Sustainable Livelihoods"
+  - "Peacebuilding"
+  - "Youth Empowerment"
+
+about:
+  eyebrow: "Our holistic approach"
+  title: "Advancing Burundi's sustainable development"
+  image: "https://primary.jwwb.nl/public/g/y/v/temp-zjdhbpfsatqhfrkshkqh/img_0543-high.jpg"
+  image_alt: "Holistic Impact Hub community work"
+  paragraph_1: "Holistic Impact Hub is a Burundi-based non-profit dedicated to fostering resilient, thriving, and self-reliant communities. We integrate health, education, environment, and economic growth to create lasting, positive change."
+  paragraph_2: "We pride ourselves on our integrated and community-driven approach. By addressing multiple facets of well-being — from health to education, environmental resilience to economic empowerment — we ensure comprehensive and sustainable development in Burundi, contributing directly to the UN Sustainable Development Goals."
+  points:
+    - "Community-driven programs designed with, not for, the people they serve"
+    - "Ten integrated program pillars spanning health, education, environment and livelihoods"
+    - "18+ local and international partners working alongside us"
+  sdgs:
+    - number: "1"
+      label: "No Poverty"
+    - number: "3"
+      label: "Good Health"
+    - number: "4"
+      label: "Quality Education"
+    - number: "5"
+      label: "Gender Equality"
+    - number: "6"
+      label: "Clean Water"
+    - number: "8"
+      label: "Decent Work"
+    - number: "13"
+      label: "Climate Action"
+    - number: "17"
+      label: "Partnerships"
+
+approach:
+  eyebrow: "How change happens"
+  title: "Our theory of change"
+  intro: "We don't parachute in with solutions — we build them together with the communities we serve, addressing root causes rather than symptoms."
+  steps:
+    - number: "01"
+      title: "Listen & assess"
+      text: "We work directly with community leaders and members to understand real needs, existing strengths, and local priorities before designing any program."
+    - number: "02"
+      title: "Co-design & deliver"
+      text: "Programs are built with community input across our ten pillars — health, education, environment, and economic empowerment — and delivered by local teams."
+    - number: "03"
+      title: "Sustain & scale"
+      text: "We build local capacity and partnerships so progress continues and grows well beyond our direct involvement, creating lasting self-reliance."
+
+programs_section:
+  eyebrow: "Core program areas"
+  title: "Practical solutions, rooted in local challenges"
+  intro: "Holistic Impact Hub offers a range of specialized programs tailored to meet the unique needs of communities across Burundi."
+  footnote: "Ten integrated pillars, one holistic mission."
+
+impact:
+  eyebrow: "Real change, measurable results"
+  title: "Since 2020, walking alongside Burundi's communities"
+  intro: "Building resilience, restoring dignity, and creating lasting impact for refugees, returnees, and vulnerable communities."
+  stats:
+    - number: 3500
+      suffix: "+"
+      label: "Community members directly served"
+    - number: 12
+      suffix: ""
+      label: "Communities reached across Burundi"
+    - number: 10
+      suffix: ""
+      label: "Integrated program pillars"
+    - number: 18
+      suffix: "+"
+      label: "Local & international partners"
+    - number: 600
+      suffix: "+"
+      label: "Youth trained & mentored"
+    - number: 65
+      suffix: "%"
+      label: "Female beneficiaries"
+
+voices_section:
+  eyebrow: "Voices from the community"
+  title: "Stories of lasting change"
+
+partners:
+  eyebrow: "Working together"
+  title: "Trusted by 18+ local and international partners"
+  text: "From grassroots community organizations to international development agencies, we build partnerships that multiply our collective impact across the Great Lakes region."
+
+give:
+  eyebrow: "Get involved"
+  title: "Help us weave a world where no one is left behind"
+  text: "Every contribution helps expand access to healthcare, education, and sustainable livelihoods for communities across Burundi."
+  options:
+    - title: "Donate"
+      text: "One-time or recurring gifts power our programs directly."
+      button: "Give now"
+    - title: "Partner with us"
+      text: "Organizations and agencies — let's multiply our impact together."
+      button: "Get in touch"
+    - title: "Volunteer"
+      text: "Share your time and skills with communities in Burundi."
+      button: "Apply"
+
+contact:
+  address_line1: "Olympic Avenue"
+  address_line2: "Bujumbura, Muha-Nyabugete Phase II"
+  address_line3: "Burundi"
+  emails:
+    - label: "General inquiries"
+      address: "info@holisticimpacthub.org"
+    - label: "Partnerships"
+      address: "partnerships@holisticimpacthub.org"
+    - label: "Founder & CEO"
+      address: "ceo@holisticimpacthub.org"
+  facebook: "https://facebook.com/profile.php?id=100064711301915"
+  linkedin: "https://linkedin.com/company/impact-your-community/"
+  youtube: "https://youtube.com/@holisticimpacthub"
+  bank:
+    bank_name: ""
+    account_name: ""
+    account_number: ""
+    swift_code: ""
+    currency: ""
+    notes: ""
+
+footer:
+  tagline: "Fostering resilient, thriving, and self-reliant communities across Burundi since 2020."
