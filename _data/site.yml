@@ -1,6 +1,8 @@
 meta:
   title: "Holistic Impact Hub | Community-Driven Development in Burundi"
   description: "Holistic Impact Hub is a Burundi-based non-profit building resilient, thriving communities through integrated programs in health, education, environment, livelihoods, and youth empowerment."
+  branding:
+  logo: "/assets/images/icon.png"
 
 hero:
   eyebrow: "Bujumbura, Burundi · Since 2020"
