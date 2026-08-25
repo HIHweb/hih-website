@@ -7,12 +7,12 @@ items:
   - title: Education & Empowerment
     description: Essential skills, STEM education and creative programs that foster
       gender equality and inclusion.
-    image: https://primary.jwwb.nl/pexels/31/3181208.jpeg
+    image: /assets/images/img-20260808-wa0102.jpg
     image_alt: Education and empowerment program
   - title: Environmental Stewardship
     description: Climate-smart practices, environmental resilience, and biodiversity
       conservation across our communities.
-    image: https://primary.jwwb.nl/public/g/y/v/temp-zjdhbpfsatqhfrkshkqh/img-20260228-wa0069-high.jpg
+    image: /assets/images/img-20260221-wa0073.jpg
     image_alt: Environmental stewardship program
   - title: Sustainable Livelihoods
     description: Local entrepreneurship, income generation and sustainable
@@ -22,7 +22,7 @@ items:
   - title: Peacebuilding & Social Cohesion
     description: Community dialogue, reconciliation, and inclusion programs for
       refugees, returnees, and host communities.
-    image: https://primary.jwwb.nl/pexels/61/6146693.jpeg
+    image: /assets/images/img-20260228-wa0068.jpg
     image_alt: Peacebuilding program
   - title: Youth Empowerment
     description: Mentorship, leadership training, and opportunities that equip young
