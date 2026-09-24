@@ -122,13 +122,15 @@ videos:
   title: HIH Documentaries
   text: Stories from the communities we serve across Burundi.
   items:
-    - title: HIH Documentary 1
+    - title: A Seed in Her Hands | Holistic Impact Hub Documentary
       id: ZkQjmsh5X28
-    - title: HIH Documentary 2
+      vertical: true
+    - title: Holistic Impact Hub — Welcome to Our Channel
       id: xcW6yUuYtuU
-    - title: HIH Documentary 3
+    - title: Her Hands Still Build | Holistic Impact Hub Documentary
       id: ENFv9VQnqCk
-    - title: HIH Short
+      vertical: true
+    - title: Help a Returnee Mother Turn a Small Seed Into a Stable Future for her children
       id: Eh1LRnktKZg
       vertical: true
 partners:
