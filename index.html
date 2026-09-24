@@ -48,7 +48,7 @@ layout: default
       {% assign video_list = site.data.youtube | default: site.data.site.videos.items %}
 {% for v in video_list %}
       <div class="video-card">
-        <div class="video-frame{% if v.vertical %} vertical{% endif %}">
+        <div class="video-frame{% if v.vertical or site.data.site.videos.tall_ids contains v.id %} vertical{% endif %}">
           <iframe src="https://www.youtube-nocookie.com/embed/{{ v.id }}" title="{{ v.title }}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
         </div>
         <p class="video-title">{{ v.title }}</p>
