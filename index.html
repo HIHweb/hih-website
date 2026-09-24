@@ -45,7 +45,8 @@ layout: default
       .video-title { margin: 12px 0 0; font-weight: 600; text-align: center; }
     </style>
     <div class="video-grid">
-      {% for v in site.data.site.videos.items %}
+      {% assign video_list = site.data.youtube | default: site.data.site.videos.items %}
+{% for v in video_list %}
       <div class="video-card">
         <div class="video-frame{% if v.vertical %} vertical{% endif %}">
           <iframe src="https://www.youtube-nocookie.com/embed/{{ v.id }}" title="{{ v.title }}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
