@@ -161,35 +161,6 @@ layout: default
     </div>
   </div>
 </section>
-{% if site.data.site.videos %}
-<section class="voices" id="videos">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">{{ site.data.site.videos.eyebrow }}</div>
-      <h2>{{ site.data.site.videos.title }}</h2>
-      <p>{{ site.data.site.videos.text }}</p>
-    </div>
-    <style>
-      .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; margin-top: 28px; }
-      .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #000; }
-      .video-frame.vertical { aspect-ratio: 9 / 16; max-width: 260px; margin: 0 auto; }
-      .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-      .video-title { margin: 12px 0 0; font-weight: 600; text-align: center; }
-    </style>
-    <div class="video-grid">
-      {% assign video_list = site.data.youtube | default: site.data.site.videos.items %}
-{% for v in video_list %}
-      <div class="video-card">
-        <div class="video-frame{% if v.vertical or site.data.site.videos.tall_ids contains v.id %} vertical{% endif %}">
-          <iframe src="https://www.youtube-nocookie.com/embed/{{ v.id }}" title="{{ v.title }}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
-        </div>
-        <p class="video-title">{{ v.title }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
 <section class="partners">
   <div class="wrap">
     <div class="eyebrow">{{ site.data.site.partners.eyebrow }}</div>
