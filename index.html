@@ -149,15 +149,15 @@ layout: default
       <h2>{{ site.data.site.give.title }}</h2>
       <p>{{ site.data.site.give.text }}</p>
       <div class="btn-row" style="margin-top:22px;">
-        <a href="#contact" class="btn" style="background:#fff; color:var(--forest-2);">Donate now</a>
-        <a href="#contact" class="btn btn-light">Become a partner</a>
+        <a href="/donate-support-us" class="btn" style="background:#fff; color:var(--forest-2);">Donate now</a>
+        <a href="/partnerships" class="btn btn-light">Become a partner</a>
       </div>
     </div>
     <div class="give-options">
       {% for option in site.data.site.give.options %}
       <div class="give-card">
         <div><h4>{{ option.title }}</h4><span>{{ option.text }}</span></div>
-        <a href="#contact" class="btn btn-light" style="padding:9px 16px; font-size:0.82rem;">{{ option.button }}</a>
+        <a href="{{ option.link | default: '#contact' }}" class="btn btn-light" style="padding:9px 16px; font-size:0.82rem;">{{ option.button }}</a>
       </div>
       {% endfor %}
     </div>
