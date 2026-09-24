@@ -132,12 +132,15 @@ give:
     - title: Donate
       text: One-time or recurring gifts power our programs directly.
       button: Give now
+      link: /donate-support-us
     - title: Partner with us
       text: Organizations and agencies — let's multiply our impact together.
       button: Get in touch
+      link: /partnerships
     - title: Volunteer
       text: Share your time and skills with communities in Burundi.
       button: Apply
+      link: /volunteer
 contact:
   address_line1: Olympic Avenue
   address_line2: Bujumbura, Muha-Nyabugete Phase II
