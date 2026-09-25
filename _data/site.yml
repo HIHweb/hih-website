@@ -148,16 +148,16 @@ contact:
   emails:
     - label: General inquiries
       address: info@holisticimpacthub.org
-    - label: Partnerships
-      address: partnerships@holisticimpacthub.org
     - label: Founder & CEO
       address: ceo@holisticimpacthub.org
+    - label: Partnerships
+      address: partnerships@holisticimpacthub.org
   facebook: https://facebook.com/profile.php?id=100064711301915
   linkedin: https://linkedin.com/company/impact-your-community/
   youtube: https://youtube.com/@holisticimpacthub
   bank:
-    bank_name: KCB Bank
-    account_name: Holistic Impact Hub
+    bank_name: ""
+    account_name: ""
     account_number: ""
     swift_code: ""
     currency: "Dollar "
