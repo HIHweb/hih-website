@@ -117,24 +117,6 @@ impact:
 voices_section:
   eyebrow: Voices from the community
   title: Stories of lasting change
-videos:
-  eyebrow: Watch our work
-  title: HIH Documentaries
-  text: Stories from the communities we serve across Burundi.
-  tall_ids:
-    - ZkQjmsh5X28
-  items:
-    - title: A Seed in Her Hands | Holistic Impact Hub Documentary
-      id: ZkQjmsh5X28
-      vertical: true
-    - title: Holistic Impact Hub — Welcome to Our Channel
-      id: xcW6yUuYtuU
-    - title: Her Hands Still Build | Holistic Impact Hub Documentary
-      id: ENFv9VQnqCk
-      vertical: true
-    - title: Help a Returnee Mother Turn a Small Seed Into a Stable Future for her children
-      id: Eh1LRnktKZg
-      vertical: true
 partners:
   eyebrow: Working together
   title: Trusted by 18+ local and international partners
@@ -174,12 +156,31 @@ contact:
   linkedin: https://linkedin.com/company/impact-your-community/
   youtube: https://youtube.com/@holisticimpacthub
   bank:
-    bank_name: ""
-    account_name: ""
+    bank_name: KCB Bank
+    account_name: Holistic Impact Hub
     account_number: ""
     swift_code: ""
-    currency: ""
+    currency: "Dollar "
     notes: ""
+videos:
+  eyebrow: Watch our work
+  title: HIH Documentaries
+  text: Stories from the communities we serve across Burundi.
+  tall_ids:
+    - ZkQjmsh5X28
+  items:
+    - title: A Seed in Her Hands | Holistic Impact Hub Documentary
+      id: ZkQjmsh5X28
+      vertical: true
+    - title: Holistic Impact Hub — Welcome to Our Channel
+      id: xcW6yUuYtuU
+    - title: Her Hands Still Build | Holistic Impact Hub Documentary
+      id: ENFv9VQnqCk
+      vertical: true
+    - title: Help a Returnee Mother Turn a Small Seed Into a Stable Future for her
+        children
+      id: Eh1LRnktKZg
+      vertical: true
 footer:
   tagline: Fostering resilient, thriving, and self-reliant communities across
     Burundi since 2020.
