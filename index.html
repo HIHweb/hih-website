@@ -37,7 +37,41 @@ layout: default
       <h2>{{ site.data.site.videos.title }}</h2>
       <p>{{ site.data.site.videos.text }}</p>
     </div>
-    
+ <style>
+  .video-feature { margin: 0 0 28px; }
+  .video-feature .video-frame { position: relative; aspect-ratio: 16 / 9; max-width: 720px; margin: 0 auto; border-radius: 10px; overflow: hidden; background: #000; }
+  .video-feature .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  .video-feature .video-title { margin: 12px 0 0; font-weight: 600; text-align: center; }
+  .video-scroll { display: flex; gap: 16px; overflow-x: auto; padding: 4px 4px 18px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .video-scroll-card { flex: 0 0 220px; scroll-snap-align: start; }
+  .video-scroll-card .video-frame { position: relative; aspect-ratio: 9 / 16; border-radius: 10px; overflow: hidden; background: #000; }
+  .video-scroll-card .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  .video-scroll-card .video-title { margin: 10px 0 0; font-weight: 600; font-size: 0.92rem; text-align: center; }
+</style>
+{% assign video_list = site.data.youtube | default: site.data.site.videos.items %}
+{% assign tall_ids = site.data.site.videos.tall_ids %}
+{% for v in video_list %}
+  {% unless v.vertical or tall_ids contains v.id %}
+  <div class="video-feature">
+    <div class="video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/{{ v.id }}" title="{{ v.title }}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    </div>
+    <p class="video-title">{{ v.title }}</p>
+  </div>
+  {% endunless %}
+{% endfor %}
+<div class="video-scroll">
+  {% for v in video_list %}
+    {% if v.vertical or tall_ids contains v.id %}
+    <div class="video-scroll-card">
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ v.id }}" title="{{ v.title }}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+      </div>
+      <p class="video-title">{{ v.title }}</p>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>  
   </div>
 </section>
 {% endif %}
