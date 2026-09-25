@@ -181,6 +181,13 @@ videos:
         children
       id: Eh1LRnktKZg
       vertical: true
+gallery:
+  eyebrow: In pictures
+  title: Moments from our work
+  text: A look at the communities and programs we serve across Burundi.
+  items:
+    - file: example.jpg
+      caption: Replace with a real caption
 footer:
   tagline: Fostering resilient, thriving, and self-reliant communities across
     Burundi since 2020.
