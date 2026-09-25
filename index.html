@@ -75,6 +75,31 @@ layout: default
   </div>
 </section>
 {% endif %}
+{% if site.data.site.gallery %}
+<section class="voices" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">{{ site.data.site.gallery.eyebrow }}</div>
+      <h2>{{ site.data.site.gallery.title }}</h2>
+      <p>{{ site.data.site.gallery.text }}</p>
+    </div>
+    <style>
+      .photo-scroll { display: flex; gap: 16px; overflow-x: auto; padding: 4px 4px 18px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+      .photo-scroll-card { flex: 0 0 260px; scroll-snap-align: start; }
+      .photo-scroll-card img { width: 260px; height: 190px; object-fit: cover; border-radius: 10px; display: block; }
+      .photo-scroll-card .photo-caption { margin: 10px 0 0; font-size: 0.92rem; text-align: center; }
+    </style>
+    <div class="photo-scroll">
+      {% for p in site.data.site.gallery.items %}
+      <div class="photo-scroll-card">
+        <img src="/assets/images/gallery/{{ p.file }}" alt="{{ p.caption }}" loading="lazy">
+        <p class="photo-caption">{{ p.caption }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 <section class="about" id="about">
   <div class="wrap about-grid">
     <img src="{{ site.data.site.about.image }}" alt="{{ site.data.site.about.image_alt }}">
