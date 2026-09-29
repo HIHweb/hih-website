@@ -156,12 +156,19 @@ contact:
   linkedin: https://linkedin.com/company/impact-your-community/
   youtube: https://youtube.com/@holisticimpacthub
   bank:
-    bank_name: ""
+    bank_name: Holistic Impact Hub
     account_name: ""
     account_number: ""
     swift_code: ""
     currency: "Dollar "
     notes: ""
+gallery:
+  eyebrow: In pictures
+  title: Moments from our work
+  text: A look at the communities and programs we serve across Burundi.
+  items:
+    - file: example.jpg
+      caption: Replace with a real caption
 videos:
   eyebrow: Watch our work
   title: HIH Documentaries
@@ -181,13 +188,6 @@ videos:
         children
       id: Eh1LRnktKZg
       vertical: true
-gallery:
-  eyebrow: In pictures
-  title: Moments from our work
-  text: A look at the communities and programs we serve across Burundi.
-  items:
-    - file: example.jpg
-      caption: Replace with a real caption
 footer:
   tagline: Fostering resilient, thriving, and self-reliant communities across
     Burundi since 2020.
