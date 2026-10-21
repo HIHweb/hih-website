@@ -156,11 +156,11 @@ contact:
   linkedin: https://linkedin.com/company/impact-your-community/
   youtube: https://youtube.com/@holisticimpacthub
   bank:
-    bank_name: KCB Bank
-    account_name: Holistic Impact Hub
-    account_number: ""
-    swift_code: ""
-    currency: "Dollar "
+    bank_name: KCB BANK KENYA
+    account_name: ASSOCIATION HOLISTIC IMPACT HUB
+    account_number: "6691467191"
+    swift_code: KCBLKENX
+    currency: USD
     notes: ""
 gallery:
   eyebrow: In pictures
