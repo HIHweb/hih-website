@@ -145,6 +145,7 @@ contact:
   address_line1: Olympic Avenue
   address_line2: Bujumbura, Muha-Nyabugete Phase II
   address_line3: Burundi
+  phone: "+257 62 35 64 10"
   emails:
     - label: General inquiries
       address: info@holisticimpacthub.org
