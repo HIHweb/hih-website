@@ -247,6 +247,7 @@ layout: default
         {% for email in site.data.site.contact.emails %}
         <div class="email-row"><span>{{ email.label }}</span><a href="mailto:{{ email.address }}">{{ email.address }}</a></div>
         {% endfor %}
+        <div class="email-row"><span>Phone</span><a href="tel:+25762356410">{{ site.data.site.contact.phone }}</a></div>
       </div>
       <div class="socials">
         <a href="{{ site.data.site.contact.facebook }}" aria-label="Facebook">FB</a>
