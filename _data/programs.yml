@@ -17,7 +17,7 @@ items:
   - title: Sustainable Livelihoods
     description: Local entrepreneurship, income generation and sustainable
       livelihoods for lasting self-reliance.
-    image:/assets/images/IMG-20260228-WA0075.jpg
+    image: /assets/images/IMG-20260228-WA0075.jpg
     image_alt: Sustainable livelihoods program
   - title: Peacebuilding & Social Cohesion
     description: Community dialogue, reconciliation, and inclusion programs for
@@ -27,5 +27,5 @@ items:
   - title: Youth Empowerment
     description: Mentorship, leadership training, and opportunities that equip young
       people to shape their own futures.
-    image: https://primary.jwwb.nl/public/g/y/v/temp-zjdhbpfsatqhfrkshkqh/img_0543-high.jpg
+    image: /assets/images/gallery/IMG_0543.jpg
     image_alt: Youth empowerment program
