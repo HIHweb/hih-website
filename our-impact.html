@@ -15,7 +15,7 @@ title: Our Impact
   <div class="wrap">
     <div class="impact-grid">
       {% for stat in site.data.site.impact.stats %}
-      <div class="stat"><strong data-count="{{ stat.number }}" data-suffix="{{ stat.suffix }}">0</strong><span>{{ stat.label }}</span></div>
+      <div class="stat"><strong data-count="{{ stat.number }}" data-suffix="{{ stat.suffix }}">{{ stat.number }}{{ stat.suffix }}</strong><span>{{ stat.label }}</span></div>
       {% endfor %}
     </div>
   </div>
