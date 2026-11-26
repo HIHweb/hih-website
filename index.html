@@ -212,7 +212,7 @@ layout: default
     </div>
     <div class="impact-grid">
       {% for stat in site.data.site.impact.stats %}
-      <div class="stat"><strong data-count="{{ stat.number }}" data-suffix="{{ stat.suffix }}">0</strong><span>{{ stat.label }}</span></div>
+      <div class="stat"><strong data-count="{{ stat.number }}" data-suffix="{{ stat.suffix }}">{{ stat.number }}{{ stat.suffix }}</strong><span>{{ stat.label }}</span></div>
       {% endfor %}
     </div>
   </div>
@@ -283,7 +283,9 @@ layout: default
         <a href="{{ site.data.site.contact.youtube }}" aria-label="YouTube">YT</a>
       </div>
     </div>
-    <form id="contactForm" novalidate>
+    <form id="contactForm" name="contact-home" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="contact-home">
+      <p hidden><label>Leave empty: <input name="bot-field"></label></p>
       <div class="field">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required autocomplete="name">
