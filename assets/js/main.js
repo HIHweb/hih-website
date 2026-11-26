@@ -59,33 +59,30 @@
   counters.forEach(function (el) { observer.observe(el); });
 })();
 
-// ---------- Contact form ----------
+// ---------- Forms (Netlify Forms) ----------
 (function () {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  const note = form.querySelector('.form-note');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (note) {
-      note.textContent = "Thanks for reaching out — we'll get back to you soon. (Note: connect this form to Formspree or a similar service to enable real email delivery.)";
-    }
-    form.reset();
-  });
-})();
-
-// ---------- Newsletter (footer) ----------
-(function () {
-  const btn = document.getElementById('newsletterBtn');
-  if (!btn) return;
-  btn.addEventListener('click', function () {
-    const input = document.getElementById('newsletter');
-    if (input && input.value) {
-      alert('Thanks for subscribing! (Connect this to Mailchimp, Buttondown, or a similar service to enable real signups.)');
-      input.value = '';
-    }
-  });
+  function wire(form, note, okMsg) {
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (r) {
+        if (!r.ok) throw new Error('fail');
+        if (note) note.textContent = okMsg;
+        form.reset();
+      }).catch(function () {
+        if (note) note.textContent = 'Sorry, that could not be sent. Please email info@holisticimpacthub.org.';
+      }).then(function () { if (btn) btn.disabled = false; });
+    });
+  }
+  var cf = document.getElementById('contactForm');
+  wire(cf, cf && cf.querySelector('.form-note'), 'Thank you. Your message has been sent and we will reply soon.');
+  wire(document.getElementById('newsletterForm'), document.getElementById('newsletterNote'), 'Thank you for subscribing.');
 })();
 
 // ---------- Footer year ----------
