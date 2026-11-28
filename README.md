@@ -98,3 +98,4 @@ assets/js/main.js       → mobile menu, counters, form handling
 assets/images/          → logo files
 admin/                  → the Decap CMS dashboard
 ```
+
